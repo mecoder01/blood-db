@@ -55,8 +55,7 @@ def main():
 		sys.exit(2)
 
 	req = requests.get("https://api.blood-db.com/blood/list?bloodType={}&location={}".format(bloodType, location),
-						   headers={"Accept":"application/json",
-						   "Authorization":"Basic <You API Key Here>" #Your API Key
+						   headers={"Accept":"application/json"
 						  })
 	output = req.text
 	data = json.loads(output)
